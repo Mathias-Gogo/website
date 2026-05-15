@@ -4,9 +4,13 @@ import AdminApp from './admin/AdminApp'
 import Blog from './pages/Blog'
 import FynxPage from './pages/Fynx'
 
+const basename = process.env.NODE_ENV === 'production' && !window.location.hostname.includes('vercel.app')
+  ? '/website'
+  : '/';
+
 export default function App() {
   return (
-    <BrowserRouter basename="/website">
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin/*" element={<AdminApp />} />
