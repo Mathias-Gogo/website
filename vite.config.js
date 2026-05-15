@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   base: '/website/',
   plugins: [react()],
-  base: '/mexuri-site/', // MUST match your repository name exactly
 })
