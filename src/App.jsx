@@ -6,7 +6,7 @@ import FynxPage from './pages/Fynx'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/website">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin/*" element={<AdminApp />} />
